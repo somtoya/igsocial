@@ -1,22 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGSOCIAL</title>
+    <title>My Instagram</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h1>welcome to igsocial {{user.username}}</h1>
-    <div>
-        <a href="{% url 'logout' %}">Logout</a>
+<nav class="navbar navbar-light fixed-top bg-light p-3 mb-5">
+    <div class="container-fluid">
+        <img class="img img-thumbnail rounded-circle" style="width: 45px;" src="https://assets.breatheco.de/apis/img/funny/kids.jpg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"/>
+        <h1 class="mx-auto">Igsocial</h1>
     </div>
- 
+    
+    </nav>
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <img class="offcanvas-title img rounded-circle" style="width: 45px;" src="{{user.profile.profile_pic.url}}" id="offcanvasExampleLabel" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"/>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="my-2">f</div>
+      <div class="container-lg mt-5">
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container-fluid tab-pane active "><br>
+                <div class="row justify-content-center">
+                    <div class="">
+
+                        <div class="card mx-auto custom-card px-3" id="prova">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left ">
+                                    <h4>My first post</h4>
+                                </div>
+                            </div>
+                            <img class="card-img"
+                                src="https://assets.breatheco.de/apis/img/images.php?blob&tags=bobdylan"
+                                alt="Card image cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">1000 Likes</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="card mx-auto custom-card mt-3 px-3" id="prova">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left ">
+                                    <h4>My Second post</h4>
+                                </div>
+                            </div>
+                            <img class="card-img" src="https://assets.breatheco.de/apis/img/funny/kids.jpg"
+                                alt="Card image cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">1000 Likes</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="card mx-auto custom-card mt-3 px-3" id="prova">
+                            <div class="row post-header col-12 py-2 px-3">
+                                <div class="col-6 float-left ">
+                                    <h4>My Third post</h4>
+                                </div>
+                            </div>
+                            <img class="card-img" src="https://assets.breatheco.de/apis/img/happy/bucket.jpeg"
+                                alt="Card image cap">
+                            <div class="card-body px-3">
+                                <h5 class="card-title">1000 Likes</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <div class="row post-header px-3 pb-3">
+                                <div class="col-1 float-left text-left"><i class="far fa-heart"></i></i></div>
+                                <div class="col-10 float-left text-left">Comment...</div>
+                                <div class="col-1 float-right text-right"><i class="fa fa-ellipsis-v"
+                                        aria-hidden="true"></i></div>
+                            </div>
+                        </div>
 
 
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu2" class="container-fluid tab-pane fade"><br>
+                <div class="row ">
+                    <div class="col-md-4 col-sm-6 px-1 my-1 ">
+                        <img src="https://assets.breatheco.de/apis/img/images.php?blob&tags=bobdylan"
+                            alt="Card image cap" width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1 ">
+                        <img src="https://assets.breatheco.de/apis/img/funny/kids.jpg" alt="Card image cap" width="100%"
+                            height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1 ">
+                        <img src="https://assets.breatheco.de/apis/img/happy/bucket.jpeg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1 ">
+                        <img src="https://assets.breatheco.de/apis/img/funny/rigoberto.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://assets.breatheco.de/apis/img/meme/borat.success.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://assets.breatheco.de/apis/img/meme/baby.success.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://assets.breatheco.de/apis/img/funny/scared-baby.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://assets.breatheco.de/apis/img/happy/happy-dog2.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+                    <div class="col-md-4 col-sm-6 px-1 my-1">
+                        <img src="https://assets.breatheco.de/apis/img/happy/happy-dog.jpg" alt="Card image cap"
+                            width="100%" height="350px">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-4"> <p> .</p></div>
+
+    <footer class="d-md-none fixed-bottom bg-light p-3">
+        <div class="row text-center">
+            <div class="col-3"><a href=""></a><i class="fa fa-home"></i></div>
+            <div class="col-3"><a href=""></a><i class="fa fa-search"></i></div>
+            <div class="col-3"><a href=""></a><i class="fa fa-bell"></i></div>
+            <div class="col-3"><a href=""></a><i class="fa fa-message"></i></div>
+
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
